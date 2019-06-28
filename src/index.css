@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css?family=Karla:400,700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: 'Karla', sans-serif;
+  font-size: 16px;
+  --primary-color: #49c6be; /*rgb 52, 186, 178*/
+  --primary-color-a01: rgba(52, 186, 178, 0.1);
+  --secondary-color: #2fa0a0; /*rgb 86, 219, 209*/
+  --tertiary-color: #f7fcfc; /*rgb 232, 255, 255*/
+  --primary-color-0-1: #edf9f8;
+
+  --red-dtc-color: #ff5d58;
+  --orange-dtc-color: #ffb307;
+  --battery-warning-color: #ffb307;
+  --alarm-color: #a175fc;
+  --maintenance-color: #3195fe;
+
+  --yellow: #ffdd07;
+  --green: #22c437;
+
+  --grey: #c9c9c9;
+  --grey-2: #ceced4;
+  --light-grey: #dcdcdc;
+  --light-grey-2: #e6e6e6;
+  --light-grey-3: #efeff1;
+  --light-grey-4: #f0f0f0;
+  --dark-grey: #6f7070;
+  --dark-grey-2: #747575;
+
+  --bg-color: var(--light-grey-3);
+  --bg-color-2: #202020;
+  --bg-color-2-a05: rgba(32, 32, 32, 0.5);
+
+  --engine-on: #2fa0a0;
+  --engine-off: #819e9e;
+  --lock-on: #53b3e3;
+  --lock-off: #819e9e;
+
+  --map_area-color: rgba(86, 211, 203, 0.3);
+
+  --header-height: 60px;
+
+  --selected-color: #49c6be;
+  --disabled-color: #6f7070;
+  --selected-tab-color: #56d3cb;
+
+  --subheader-height: 100px;
+  --health-filter-height: 80px;
+
+  --header-with-subheader-height: calc(var(--header-height) + var(--subheader-height));
+
+  --button-border-radius: 18px;
+  --diagnostics-filters-offset: -80px;
+}
+
+@media (max-height: 799px) {
+  body {
+    --header-height: 50px;
+    --subheader-height: 75px;
+    --health-filter-height: 65px;
+  }
+}
+
+html {
+  height: 100%;
+  min-height: 100vh;
+
+  background: var(--bg-color);
+}
+
+#root {
+  height: 100vh;
+}
+
+button.ant-btn {
+  border-radius: 5px;
+}
+
+button.ant-btn-primary {
+  background-color: var(--primary-color);
+  box-shadow: none;
+  border-color: var(--primary-color);
+  color: white;
+}
+
+button.ant-btn-warning {
+  box-shadow: none;
+  border-color: rgb(253, 87, 87);
+  color: white;
+  background-color: rgb(253, 87, 87);
+}
+
+/* popover */
+.ant-popover .ant-popover-inner {
+  border: 1px solid var(--primary-color);
+}
+
+.ant-popover.ant-popover-placement-top .ant-popover-arrow {
+  border-bottom-width: 1px;
+  border-right-width: 1px;
+  border-bottom-color: var(--primary-color);
+  border-right-color: var(--primary-color);
+}
+
+.ant-popover.ant-popover-placement-bottom .ant-popover-arrow {
+  border-top-width: 1px;
+  border-left-width: 1px;
+  border-top-color: var(--primary-color);
+  border-left-color: var(--primary-color);
+}
+
+.bold {
+  font-weight: 700;
+}
+
+#root .react-datepicker-popper {
+  z-index: 2;
+}
